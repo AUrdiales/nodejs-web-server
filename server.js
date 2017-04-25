@@ -56,6 +56,12 @@ app.get('/bad', (req, res) => {
       errorMessage: 'an error has ocurred an we can not fix it'
     });
 });
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs',{
+    title: 'This is the projects page'
+  });
+});
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
